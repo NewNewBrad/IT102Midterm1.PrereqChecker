@@ -39,105 +39,99 @@
 		text-align:left;
 	}
 	footer{
-		height:50px;
 		background:#292B41;
 		clear:both;
 	}
 	table{
 		margin:2px;
 	}
-<<<<<<< HEAD
 	form{
 		text-align:center;
 	}
-=======
->>>>>>> a9a6f7a479f387c859a800f77d6aa083141fc1c5
+	button{
+		margin:15px;
+	}
 
 </style>
 </head>
 
 <body>
+<script type="text/javascript">
+	alert("Please answer the questions and press 'Submit' to determine if you meet the prequsites to apply to the NSC BAS in Application Development")
+</script>
+
+
+</script>
 <div id="wrapper">
 	<header>
 		<img src="images/northseattlecollege.jpg">
 	</header>
-
 	<nav>
 		<h1>Do you have the prequsites to enroll in NSC's Bachelor's of Applied Science in Application Development? </h1>
 	</nav>
-
 	<main>
-		<table border="1">
+		<table border=".5">
 			<tr>
-			<th width="620">Prerequsite:</th>
-			<th width="290">Answer:</th>
+			<th width="620"><em>Prerequsite:</em></th>
+			<th width="290"><em>Answer:</em></th>
 			</tr>
 
 			<tr>
 				<td>Have you taken at least 10 credits of Progamming and IT courses?<br> (IT102, IT115, IT162, CSC110, of CSC142)
 				</td>
 				<td>
-<<<<<<< HEAD
 					<form id="progamming">
-					<input type="radio" /> YES
-					<input type="radio" checked="checked" /> NO
+					<input type="radio" id="programming_Y" /> YES
+					<input type="radio" /> NO
 					</form>
-=======
-					FORM1
->>>>>>> a9a6f7a479f387c859a800f77d6aa083141fc1c5
 				</td>
 			</tr>
 			<tr>
 				<td>Have you taken at least 5 credits of Database Development/SQL courses?
 				</td>
 				<td>
-<<<<<<< HEAD
 					<form id="sql">
-					<input type="radio" /> YES
-					<input type="radio" checked="checked" /> NO
+					<input type="radio" id="sql_Y" /> YES
+					<input type="radio" /> NO
 					</form>
-=======
-					FORM2
->>>>>>> a9a6f7a479f387c859a800f77d6aa083141fc1c5
 				</td>
 			</tr>
 			<tr>
 				<td>Have you taken at least 5 credits of Web progamming/development courses?
 				</td>
 				<td>
-<<<<<<< HEAD
 					<form id="webdev">
-					<input type="radio" /> YES
-					<input type="radio" checked="checked" /> NO
+					<input type="radio" id="webdev_Y" /> YES
+					<input type="radio" /> NO
 					</form>
-=======
-					FORM3
->>>>>>> a9a6f7a479f387c859a800f77d6aa083141fc1c5
 				</td>
 			</tr>
 			<tr>
 				<td>Do you meet the General Education requirements of ENGL 101, Math 142, and Math 146?
 				</td>
 				<td>
-<<<<<<< HEAD
 					<form id="genED">
-					<input type="radio" /> YES
-					<input type="radio" checked="checked" /> NO
+					<input type="radio" id="genED_Y" /> YES
+					<input type="radio" /> NO
 					</form>
-=======
-					FORM4
->>>>>>> a9a6f7a479f387c859a800f77d6aa083141fc1c5
 				</td>
 			</tr>				
 		</table>
-		
 	</main>
-
 	<footer>
-		
+	<script type="text/javascript">
+		var checker = function checker(){
+			if(document.getElementById("programming_Y").checked && document.getElementById("sql_Y").checked && document.getElementById("webdev_Y").checked && document.getElementById("genED_Y").checked){
+				alert("Congratulations! You meet the requirements to enroll in the BAS of Applied Science program at NSC.")
+			}
+			else{
+				alert("I'm sorry, you do not meet one or more prerequisites to apply to the BAS of Applied Science at NSC.")
+			}
+		}
+
+	</script>
+	<form><button onclick="checker()">Submit</button></form>
 	</footer>
 </div><!-- End of Wrapper -->
-
 </body>
-
 </html> 
